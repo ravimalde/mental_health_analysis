@@ -65,3 +65,10 @@ The top 3 features and there relationship to the number of poor physical health 
 <p align="center">
   <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/feature_plots.png" width=750>
 </p>
+
+The data was then split into a training set (2095 instances) and a test set (1000 instances). The data was then transformed using StandardScaler. Linear regression, polynomial regression, lasso regression, ridge regression and ElasticNet regression models were then made. KFold cross validation was used to validate each model's performance. The optimum polynomial degree was found to be 3, therefore this was used for the regularised regression models as well.
+
+<h5 align="center">Model Performances</h5>
+<p align="center">
+  <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/model_performances.png" width=750>
+</p>
