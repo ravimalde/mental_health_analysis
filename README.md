@@ -44,5 +44,5 @@ The aim of this project was to get a better understanding of what the drivers of
 <a name="executive_summary"></a>
 ## Executive Summary
 
-
+The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. This was done by 
 
