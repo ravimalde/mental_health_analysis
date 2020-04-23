@@ -106,3 +106,12 @@ The dataset was then split and transformed in the same way as previously. This t
 <p align="center">
   <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/model_performances2.png" width=750>
 </p>
+
+This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, die to the reduction in colinearity it means that the feature coefficients are more realistic. The top 5 most important features were identified as teen births, food insecurity, children in single-parent households, low birthweight and unemployment.
+
+<a name="recommendations"></a>
+### Recommendations
+
+In this analysis no policies were put forward to reduce the number of poor mental health days, we'll leave that to the experts. However, this analysis gives the policy makers a place to start. They should investigate whether or not these features simply correlate with poor mental health or if the relationship is causal. 
+
+
