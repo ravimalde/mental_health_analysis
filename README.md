@@ -82,4 +82,10 @@ All of the models performed similarly; the ridge regression was the best perform
 <a name="evaluation_1"></a>
 ### Evaluation (Part 1/2)
 
+The model was then evaluated against the assumptions of linear regression. These are as follows:
 
+- Linear relationships between features and the target variable.
+- Residuals must be normally distributed.
+- There must be no multicolinearit in the data.
+
+ 
