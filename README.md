@@ -12,7 +12,13 @@ The aim of this project was to get a better understanding of what the drivers of
 2. [ Methods Used ](#methods_used)
 3. [ Technologies Used ](#technologies_used)
 4. [ Executive Summary ](#executive_summary)
-
+  * [ Preprocessing ](#preprocessing)
+  * [ Modelling (Part 1/2) ](#modelling_1)
+  * [ Evaluation (Part1/2) ](#evaluation_1)   
+  * [ Modelling (Part 2/2) ](#modelling_2)
+  * [ Evaluation (Part 2/2) ](#evaluation_2)
+  * [ Recommendations ](#recommendations)
+  
 <a name="file_description"></a>
 ## File Descriptions
 
