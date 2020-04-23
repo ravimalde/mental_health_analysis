@@ -18,3 +18,31 @@ The aim of this project was to get a better understanding of what the drivers of
 
 - index.ipynb: notebook containing all of the preprocessing and modelling.
 - analytic_data2019.csv: [2019 US County Health Rankings](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.
+
+<a name="methods_used"></a>
+## Methods Used
+
+- Data exploration
+- Data visualisation
+- Data cleaning
+- Data transformation
+- Regression (linear, polynomial, lasso, ridge, ElasticNet)
+- Variance inflation factor analysis
+
+<a name="technologies_used"></a>
+## Technologies
+
+- Python
+- Pandas
+- Numpy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Yellowbrick
+- statsmodels
+
+<a name="executive_summary"></a>
+## Executive Summary
+
+
+
