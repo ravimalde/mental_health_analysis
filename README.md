@@ -84,8 +84,8 @@ All of the models performed similarly; the ridge regression was the best perform
 
 The model was then evaluated against the assumptions of linear regression. These are as follows:
 
-- Linear relationships between features and the target variable.
-- Residuals must be normally distributed.
-- There must be no multicolinearit in the data.
+1. Linear relationships between features and the target variable.
+2. Residuals must be normally distributed.
+3. There must be no multicolinearity in the data.
 
- 
+The first two assumptions were satisfied. However a variance inflation factor (VIF) analsyis was conducted to determine how much multicolinearity was present in the dataset. Unfortunately, there was a lot. The normal acceptable rate of multicolinearity is approximately 5, however all of the features had VIF factors between the range of 35 and 113. This doesn't affect the accuracy of the model, however it does mean that the coefficients of the features are inflated/deflated and therefore not realistic. Because the purpose of this analysis is to drive policy change, the coefficients of the features are important; this meant that the modelling needed to be re-run with features that had less colinearity.
