@@ -12,7 +12,13 @@ The aim of this project was to get a better understanding of what the drivers of
 2. [ Methods Used ](#methods_used)
 3. [ Technologies Used ](#technologies_used)
 4. [ Executive Summary ](#executive_summary)
-
+  * [ Preprocessing ](#preprocessing)
+  * [ Modelling (Part 1/2) ](#modelling_1)
+  * [ Evaluation (Part1/2) ](#evaluation_1)   
+  * [ Modelling (Part 2/2) ](#modelling_2)
+  * [ Evaluation (Part 2/2) ](#evaluation_2)
+  * [ Recommendations ](#recommendations)
+  
 <a name="file_description"></a>
 ## File Descriptions
 
@@ -46,8 +52,8 @@ The aim of this project was to get a better understanding of what the drivers of
 
 The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. This was done using various regression models that establish how certain features in the dataset correlate with poor mental health. The final model found that there were three features that had the most predictive power; these were teen births, food insecurity and single parent households. From this analysis we cannot assume any causation, however it may be indicative that more research should be done in these areas if we are trying to combat poor mental health.
 
-<a name="preprocessing_1"></a>
-### Preprocessing (Part 1/2)
+<a name="preprocessing"></a>
+### Preprocessing
 
 Many of the columns in the dataset had almost zero entries and therefore have no value in the analysis. One of the first stages in the cleaning process was to remove these, therefore any columns with more than 10% of the data missing were omitted. The remaining null values were then filled in with the median of the state in which the county is situated. This reduced the number of nulls significantly, however there were still a few remaining in cases where there was no information on that feature in the whole state. Columns containing these nulls were then removed from the analysis.
 
@@ -65,7 +71,6 @@ The top 3 features and there relationship to the number of poor physical health 
 <p align="center">
   <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/feature_plots.png" width=750>
 </p>
-
 
 <a name="modelling_1"></a>
 ### Modelling (Part 1/2)
@@ -89,3 +94,30 @@ The model was then evaluated against the assumptions of linear regression. These
 3. There must be no multicolinearity in the data.
 
 The first two assumptions were satisfied. However a variance inflation factor (VIF) analsyis was conducted to determine how much multicolinearity was present in the dataset. Unfortunately, there was a lot. The normal acceptable rate of multicolinearity is approximately 5, however all of the features had VIF factors between the range of 35 and 113. This doesn't affect the accuracy of the model, however it does mean that the coefficients of the features are inflated/deflated and therefore not realistic. Because the purpose of this analysis is to drive policy change, the coefficients of the features are important; this meant that the modelling needed to be re-run with features that had less colinearity.
+
+<a name="modelling_2"></a>
+### Modelling (Part 2/2)
+
+New features were selected by conducting a VIF analysis on the top 20 most correlated features with poor mental health. The 5 features with the lowest VIF factor were selected for modelling. These were as follows:
+
+- Unemployment
+- Teen births
+- Children in single-parent households
+- Low birthweight
+- Food insecurity
+
+The dataset was then split and transformed in the same way as previously. This time, the polynomial degree chosen was 2, as despite a polynomial degree of 3 performing marginally better, it was decided that the simplicity of a degree of 2 is of more importance (for the sake of interpretability). The model performances on the validation dataset are given below:
+
+<h5 align="center">Model Performances</h5>
+<p align="center">
+  <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/model_performances2.png" width=750>
+</p>
+
+This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, die to the reduction in colinearity it means that the feature coefficients are more realistic. The top 5 most important features were identified as teen births, food insecurity, children in single-parent households, low birthweight and unemployment.
+
+<a name="recommendations"></a>
+### Recommendations
+
+In this analysis no policies were put forward to reduce the number of poor mental health days, we'll leave that to the experts. However, this analysis gives the policy makers a place to start. They should investigate whether or not these features simply correlate with poor mental health or if the relationship is causal. 
+
+
