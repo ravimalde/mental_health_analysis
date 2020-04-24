@@ -113,7 +113,15 @@ The dataset was then split and transformed in the same way as previously. This t
   <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/model_performances2.png" width=750>
 </p>
 
-This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, die to the reduction in colinearity it means that the feature coefficients are more realistic. The top 5 most important features were identified as teen births, food insecurity, children in single-parent households, low birthweight and unemployment.
+This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, die to the reduction in colinearity it means that the feature coefficients are more realistic. 
+
+**The top 5 most important features were identified as**:
+
+- **Teen births
+- **Food insecurity
+- **Children in single-parent households
+- **Low birthweight 
+- **Unemployment**
 
 <a name="evaluation_2"></a>
 ### Evaluation (Part 2/2)
