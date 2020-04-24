@@ -115,6 +115,16 @@ The dataset was then split and transformed in the same way as previously. This t
 
 This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, die to the reduction in colinearity it means that the feature coefficients are more realistic. The top 5 most important features were identified as teen births, food insecurity, children in single-parent households, low birthweight and unemployment.
 
+<a name="evaluation_2"></a>
+### Evaluation (Part 2/2)
+
+As the chosen model was now Lasso regression with a polynomial degree of 2, we no longer needed to check that the relationships between the features and poor mental health days were linear, and the multicolinearity had already been dealt with through the VIF Analysis. Lastly we had to check that the distribution of residuals was normal; this was done using the yellowbrick library. The plot presented below shows that the residuals from both the training and test datasets follow an approximately normal distribution:
+
+<h5 align="center">Model Performances</h5>
+<p align="center">
+  <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/residuals_distribution.png" width=750>
+</p>
+
 <a name="recommendations"></a>
 ### Recommendations
 
