@@ -70,7 +70,7 @@ The top 3 features and there relationship to the number of poor physical health 
 
 <h5 align="center">Poor Mental Health Days vs Top 3 Most Correlated Features</h5>
 <p align="center">
-  <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/feature_plots.png" width=750>
+  <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/correlated_features.png" width=750>
 </p>
 
 <a name="modelling_1"></a>
