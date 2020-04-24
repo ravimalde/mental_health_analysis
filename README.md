@@ -1,6 +1,6 @@
 # United States Mental Health Analysis
 
-The aim of this project was to get a better understanding of what the drivers of poor mental health are in the US. The dataset used was from a [2019 US County Health Ranking census](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation). An array of regression techniques were used to explore how mental health related to other physical and mental health indicators in the dataset. The final model highlighted that teen births, food insecurity and single parent households as the the best predictors of poor mental health.
+The aim of this project was to get a better understanding of what the drivers of poor mental health are in the US. The dataset used was from a [2019 US County Health Ranking census](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation). An array of regression techniques were used to explore how mental health related to other physical and mental health indicators in the dataset. The final model highlighted that teen births, food insecurity and single parent households as the the best predictors of poor mental health. No policy recommendations are put forward in this analysis, however it does suggest policy makers should investigate whether the relationships between poor mental health and the highlighted features are simply correlational, or if they are causational.
 
 - Email: ravidmalde@gmail.com
 - LinkedIn: www.linkedin.com/in/ravi-malde
