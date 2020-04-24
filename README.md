@@ -51,7 +51,7 @@ The aim of this project was to get a better understanding of what the drivers of
 <a name="executive_summary"></a>
 ## Executive Summary
 
-The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. This was done using various regression models that establish how certain features in the dataset correlate with poor mental health. The final model found that there were three features that had the most predictive power; these were teen births, food insecurity and single parent households. From this analysis we cannot assume any causation, however it may be indicative that more research should be done in these areas if we are trying to combat poor mental health.
+The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. The approach taken was to use regression models to establish how the multitude of physical and mental health features in the dataset correlate with poor mental health.
 
 <a name="preprocessing"></a>
 ### Data Exploration and Preprocessing
