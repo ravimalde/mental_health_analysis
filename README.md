@@ -137,6 +137,6 @@ As the chosen model was now Lasso regression with a polynomial degree of 2, we n
 <a name="recommendations"></a>
 ### Recommendations
 
-In this analysis no policies were put forward to reduce the number of poor mental health days, we'll leave that to the experts. However, this analysis gives the policy makers a place to start. They should investigate whether or not these features simply correlate with poor mental health or if the relationship is causal. 
+In this analysis no policies were put forward to reduce the number of poor mental health days, I'll leave that to the experts. However, this analysis gives the policy makers a place to start. They should investigate whether or not these features simply correlate with poor mental health or if the relationship is causal. 
 
 
