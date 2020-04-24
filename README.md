@@ -24,7 +24,7 @@ The aim of this project was to get a better understanding of what the drivers of
 
 - index.ipynb: notebook containing all of the preprocessing and modelling.
 - analytic_data2019.csv: [2019 US County Health Rankings](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.
-- images: images to be used in readme document.
+- images: contains images to be used in readme document.
 
 <a name="methods_used"></a>
 ## Methods Used
