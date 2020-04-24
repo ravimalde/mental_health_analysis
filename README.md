@@ -117,11 +117,11 @@ This time, lasso regression was the best performer, and it had only 9 features; 
 
 **The top 5 most important features were identified as**:
 
-- **Teen births
-- **Food insecurity
-- **Children in single-parent households
-- **Low birthweight 
-- **Unemployment**
+- **Number of teen births**
+- **Percentage of people living with food insecurity**
+- **Percentage of children living in single-parent households**
+- **Percentage born at a low birthweight**
+- **Percentage of unemployment**
 
 <a name="evaluation_2"></a>
 ### Evaluation (Part 2/2)
