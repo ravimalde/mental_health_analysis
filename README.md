@@ -1,6 +1,6 @@
-# United States Mantal Health Analysis
+# United States Mental Health Analysis
 
-The aim of this project was to get a better understanding of what the drivers of poor mental health are in the US. The dataset used was from a [2019 US County Health Ranking census](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation). An array of regression techniques were used to explore how mental health related to the other features in the dataset. The final model highlighted that teen births, food insecurity and single parent households as the the best predictors of poor mental health.
+The aim of this project was to get a better understanding of what the drivers of poor mental health are in the US. The dataset used was from a [2019 US County Health Ranking census](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation). An array of regression techniques were used to explore how mental health related to other physical and mental health indicators in the dataset. The final model highlighted that number of teen births, percentage living with food insecurity, percentage living in single parent households, percentage of low birthweights and percentage of unemployment are the best predictors of poor mental health. No policy recommendations are put forward in this analysis, however it does suggest policy makers should investigate whether the relationships between poor mental health and the highlighted features are simply correlational, or if they are in fact causational.
 
 - Email: ravidmalde@gmail.com
 - LinkedIn: www.linkedin.com/in/ravi-malde
@@ -12,7 +12,7 @@ The aim of this project was to get a better understanding of what the drivers of
 2. [ Methods Used ](#methods_used)
 3. [ Technologies Used ](#technologies_used)
 4. [ Executive Summary ](#executive_summary)
-  * [ Preprocessing ](#preprocessing)
+  * [ Data Exploration and Preprocessing ](#preprocessing)
   * [ Modelling (Part 1/2) ](#modelling_1)
   * [ Evaluation (Part1/2) ](#evaluation_1)   
   * [ Modelling (Part 2/2) ](#modelling_2)
@@ -24,6 +24,7 @@ The aim of this project was to get a better understanding of what the drivers of
 
 - index.ipynb: notebook containing all of the preprocessing and modelling.
 - analytic_data2019.csv: [2019 US County Health Rankings](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation) data.
+- images: contains images to be used in readme document.
 
 <a name="methods_used"></a>
 ## Methods Used
@@ -50,10 +51,10 @@ The aim of this project was to get a better understanding of what the drivers of
 <a name="executive_summary"></a>
 ## Executive Summary
 
-The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. This was done using various regression models that establish how certain features in the dataset correlate with poor mental health. The final model found that there were three features that had the most predictive power; these were teen births, food insecurity and single parent households. From this analysis we cannot assume any causation, however it may be indicative that more research should be done in these areas if we are trying to combat poor mental health.
+The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. The approach taken was to use regression models to establish how the multitude of physical and mental health features in the dataset correlate with poor mental health.
 
 <a name="preprocessing"></a>
-### Preprocessing
+### Data Exploration and Preprocessing
 
 Many of the columns in the dataset had almost zero entries and therefore have no value in the analysis. One of the first stages in the cleaning process was to remove these, therefore any columns with more than 10% of the data missing were omitted. The remaining null values were then filled in with the median of the state in which the county is situated. This reduced the number of nulls significantly, however there were still a few remaining in cases where there was no information on that feature in the whole state. Columns containing these nulls were then removed from the analysis.
 
@@ -113,7 +114,25 @@ The dataset was then split and transformed in the same way as previously. This t
   <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/model_performances2.png" width=750>
 </p>
 
-This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, die to the reduction in colinearity it means that the feature coefficients are more realistic. The top 5 most important features were identified as teen births, food insecurity, children in single-parent households, low birthweight and unemployment.
+This time, lasso regression was the best performer, and it had only 9 features; therefore it was selected as the final model. **The lasso model was then tested on the test dataset, achieving an r^2 of 0.51**. Although this is a significant drop in performance, due to the reduction in colinearity it means that the feature coefficients are more realistic. 
+
+**The top 5 most important features were identified as**:
+
+- **Number of teen births**
+- **Percentage of people living with food insecurity**
+- **Percentage of children living in single-parent households**
+- **Percentage born at a low birthweight**
+- **Percentage of unemployment**
+
+<a name="evaluation_2"></a>
+### Evaluation (Part 2/2)
+ 
+As the chosen model was now Lasso regression with a polynomial degree of 2, we no longer needed to check that the relationships between the features and poor mental health days were linear, and the multicolinearity had already been dealt with through the VIF Analysis. Lastly we had to check that the distribution of residuals was normal; this was done using the yellowbrick library. The plot presented below shows that the residuals from both the training and test datasets follow an approximately normal distribution:
+
+<h5 align="center">Model Performances</h5>
+<p align="center">
+  <img src="https://github.com/ravimalde/mental_health_analysis/blob/master/images/residuals_distribution.png" width=750>
+</p>
 
 <a name="recommendations"></a>
 ### Recommendations
