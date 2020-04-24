@@ -12,7 +12,7 @@ The aim of this project was to get a better understanding of what the drivers of
 2. [ Methods Used ](#methods_used)
 3. [ Technologies Used ](#technologies_used)
 4. [ Executive Summary ](#executive_summary)
-  * [ Preprocessing ](#preprocessing)
+  * [ Data Exploration and Preprocessing ](#preprocessing)
   * [ Modelling (Part 1/2) ](#modelling_1)
   * [ Evaluation (Part1/2) ](#evaluation_1)   
   * [ Modelling (Part 2/2) ](#modelling_2)
@@ -53,7 +53,7 @@ The aim of this project was to get a better understanding of what the drivers of
 The dataset contained physical and mental health information on the constituents of 3195 counties across the US. In these counties, the mean number of poor mental health days per month is 3.94; sadly, that's quite a substantial number! The aim of this analysis was to get to the bottom of why people experience poor mental health. This was done using various regression models that establish how certain features in the dataset correlate with poor mental health. The final model found that there were three features that had the most predictive power; these were teen births, food insecurity and single parent households. From this analysis we cannot assume any causation, however it may be indicative that more research should be done in these areas if we are trying to combat poor mental health.
 
 <a name="preprocessing"></a>
-### Preprocessing
+### Data Exploration and Preprocessing
 
 Many of the columns in the dataset had almost zero entries and therefore have no value in the analysis. One of the first stages in the cleaning process was to remove these, therefore any columns with more than 10% of the data missing were omitted. The remaining null values were then filled in with the median of the state in which the county is situated. This reduced the number of nulls significantly, however there were still a few remaining in cases where there was no information on that feature in the whole state. Columns containing these nulls were then removed from the analysis.
 
