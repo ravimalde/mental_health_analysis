@@ -125,7 +125,7 @@ This time, lasso regression was the best performer, and it had only 9 features; 
 
 <a name="evaluation_2"></a>
 ### Evaluation (Part 2/2)
-
+ 
 As the chosen model was now Lasso regression with a polynomial degree of 2, we no longer needed to check that the relationships between the features and poor mental health days were linear, and the multicolinearity had already been dealt with through the VIF Analysis. Lastly we had to check that the distribution of residuals was normal; this was done using the yellowbrick library. The plot presented below shows that the residuals from both the training and test datasets follow an approximately normal distribution:
 
 <h5 align="center">Model Performances</h5>
